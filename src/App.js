@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, NavLink, Redirect } from 'react-router-dom';
+
+import PeoplePage from './components/PeoplePage';
+import AttractionsPage from './components/AttractionsPage';
+import AssignAttractionPage from './components/AssignAttractionPage';
+import AssignRoomPage from './components/AssignRoomPage';
 
 const App = () => (
   <BrowserRouter>
@@ -10,10 +15,12 @@ const App = () => (
       <NavLink to="/assign-room">Assign room</NavLink>
     </nav>
 
-    <Route path="/people" render={() => <div>People</div>} />
-    <Route path="/attractions" render={() => <div>Attractions</div>} />
-    <Route path="/assign-attraction" render={() => <div>Assign attraction</div>} />
-    <Route path="/assign-room" render={() => <div>Assign room</div>} />
+    <Route exact path="/" render={() => <Redirect to="/people" />} />
+
+    <Route path="/people" component={PeoplePage} />
+    <Route path="/attractions" component={AttractionsPage} />
+    <Route path="/assign-attraction" component={AssignAttractionPage} />
+    <Route path="/assign-room" component={AssignRoomPage} />
   </BrowserRouter>
 )
 
