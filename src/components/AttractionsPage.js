@@ -1,5 +1,12 @@
 import React from "react";
 
-const AttractionsPage = () => <div>Attractions page</div>;
+import Navigation from './Navigation';
+
+const AttractionsPage = () => (
+  <>
+    <Navigation />
+    <div>Attractions page</div>
+  </>
+);
 
 export default AttractionsPage;
