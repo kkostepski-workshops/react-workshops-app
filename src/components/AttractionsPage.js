@@ -1,5 +1,5 @@
 import React from "react";
 
-const AttractionsPage = () => <div>Assign attraction page</div>;
+const AttractionsPage = () => <div>Attractions page</div>;
 
 export default AttractionsPage;

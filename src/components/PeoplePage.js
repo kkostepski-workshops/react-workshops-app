@@ -1,5 +1,5 @@
 import React from "react";
 
-const PeoplePage = () => <div>Assign attraction page</div>;
+const PeoplePage = () => <div>People page</div>;
 
 export default PeoplePage;

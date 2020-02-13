@@ -1,5 +1,5 @@
 import React from "react";
 
-const AssignRoomPage = () => <div>Assign attraction page</div>;
+const AssignRoomPage = () => <div>Assign room page</div>;
 
 export default AssignRoomPage;
