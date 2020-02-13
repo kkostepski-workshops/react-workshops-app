@@ -1,5 +1,12 @@
 import React from "react";
 
-const PeoplePage = () => <div>Assign attraction page</div>;
+import Navigation from './Navigation';
+
+const PeoplePage = () => (
+  <>
+    <Navigation />
+    <div>People page</div>
+  </>
+);
 
 export default PeoplePage;

@@ -1,5 +1,12 @@
 import React from "react";
 
-const AssignAttractionPage = () => <div>Assign attraction page</div>;
+import Navigation from './Navigation';
+
+const AssignAttractionPage = () => (
+  <>
+    <Navigation />
+    <div>Assign attraction page</div>
+  </>
+);
 
 export default AssignAttractionPage;
