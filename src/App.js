@@ -1,13 +1,15 @@
-import React from 'react';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Route, Redirect } from "react-router-dom";
 
-import PeoplePage from './components/PeoplePage';
-import AttractionsPage from './components/AttractionsPage';
-import AssignAttractionPage from './components/AssignAttractionPage';
-import AssignRoomPage from './components/AssignRoomPage';
+import PeoplePage from "./components/PeoplePage";
+import AttractionsPage from "./components/AttractionsPage";
+import AssignAttractionPage from "./components/AssignAttractionPage";
+import AssignRoomPage from "./components/AssignRoomPage";
+import GlobalStyle from './components/GlobalStyle'
 
 const App = () => (
   <BrowserRouter>
+    <GlobalStyle />
     <Route exact path="/" render={() => <Redirect to="/people" />} />
 
     <Route path="/people" component={PeoplePage} />
@@ -15,6 +17,6 @@ const App = () => (
     <Route path="/assign-attraction" component={AssignAttractionPage} />
     <Route path="/assign-room" component={AssignRoomPage} />
   </BrowserRouter>
-)
+);
 
 export default App;
