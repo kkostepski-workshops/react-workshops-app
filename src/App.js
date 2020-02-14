@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 
-import PeoplePage from "./components/PeoplePage";
-import AttractionsPage from "./components/AttractionsPage";
-import AssignAttractionPage from "./components/AssignAttractionPage";
-import AssignRoomPage from "./components/AssignRoomPage";
-import GlobalStyle from './components/GlobalStyle'
+import PeoplePage from "./components/PeoplePage/PeoplePage";
+import AttractionsPage from "./components/AttractionsPage/AttractionsPage";
+import AssignAttractionPage from "./components/AssignAttractionPage/AssignAttractionPage";
+import AssignRoomPage from "./components/AssignRoomPage/AssignRoomPage";
+import GlobalStyle from './components/GlobalStyle/GlobalStyle'
 
 const App = () => (
   <BrowserRouter>
