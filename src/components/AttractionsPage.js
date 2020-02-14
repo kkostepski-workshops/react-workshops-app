@@ -1,12 +1,14 @@
 import React from "react";
 
 import Navigation from './Navigation';
+import Page from "./Page";
+import Content from "./Content";
 
 const AttractionsPage = () => (
-  <>
+  <Page>
     <Navigation />
-    <div>Attractions page</div>
-  </>
+    <Content>Attractions page</Content>
+  </Page>
 );
 
 export default AttractionsPage;

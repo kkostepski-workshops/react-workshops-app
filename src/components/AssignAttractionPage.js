@@ -1,12 +1,14 @@
 import React from "react";
 
-import Navigation from './Navigation';
+import Navigation from "./Navigation";
+import Page from "./Page";
+import Content from "./Content";
 
 const AssignAttractionPage = () => (
-  <>
+  <Page>
     <Navigation />
-    <div>Assign attraction page</div>
-  </>
+    <Content>Assign attraction page</Content>
+  </Page>
 );
 
 export default AssignAttractionPage;
