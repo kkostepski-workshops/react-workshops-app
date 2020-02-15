@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Page from "../../layouts/Page/Page";
+import Page from '../../layouts/Page/Page';
 
 const AttractionsPage = () => <Page hasNavigation>Attractions page</Page>;
 
