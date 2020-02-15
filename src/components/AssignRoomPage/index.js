@@ -1,1 +1,1 @@
-export { default } from "./AssignRoomPage";
+export { default } from './AssignRoomPage';

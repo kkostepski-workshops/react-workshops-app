@@ -1,5 +1,5 @@
-import { NavLink as NativeNavLink } from "react-router-dom";
-import styled from "styled-components";
+import { NavLink as NativeNavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Navigation = styled.nav`
   border-right: 1px solid #000;
