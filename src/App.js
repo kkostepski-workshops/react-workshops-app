@@ -5,11 +5,9 @@ import PeoplePage from './components/PeoplePage/PeoplePage';
 import AttractionsPage from './components/AttractionsPage/AttractionsPage';
 import AssignAttractionPage from './components/AssignAttractionPage/AssignAttractionPage';
 import AssignRoomPage from './components/AssignRoomPage/AssignRoomPage';
-import GlobalStyle from './components/GlobalStyle/GlobalStyle';
 
 const App = () => (
   <BrowserRouter>
-    <GlobalStyle />
     <Route exact path="/" render={() => <Redirect to="/people" />} />
 
     <Route path="/people" component={PeoplePage} />
