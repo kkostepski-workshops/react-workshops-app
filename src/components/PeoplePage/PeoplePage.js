@@ -1,5 +1,6 @@
 import React from 'react';
 import useAxios from 'axios-hooks';
+import { NavLink } from 'react-router-dom';
 
 import Spinner from '../../components/Spinner';
 import Heading from '../../layouts/Heading';
@@ -23,7 +24,15 @@ const PeoplePage = () => {
         <Spinner />
       ) : (
         <>
-          <Heading>People page</Heading>
+          <Heading
+            renderActions={() => (
+              <Styled.ButtonAddNew>
+                <NavLink to="/people/new">Add new person</NavLink>
+              </Styled.ButtonAddNew>
+            )}
+          >
+            People
+          </Heading>
 
           <Styled.Table>
             <thead>

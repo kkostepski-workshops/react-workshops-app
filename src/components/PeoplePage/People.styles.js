@@ -16,4 +16,17 @@ const Table = styled.table`
   }
 `;
 
-export { Table };
+const ButtonAddNew = styled.button`
+  box-shadow: none;
+  padding: 6px 10px;
+  font-weight: 500;
+  border: 1px solid #000;
+  background-color: #c0c0c0;
+  
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.fontColor};
+  }
+`;
+
+export { Table, ButtonAddNew };
