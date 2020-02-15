@@ -5,6 +5,7 @@ const Navigation = styled.nav`
   border-right: 1px solid #000;
   width: 200px;
   min-height: 100%;
+  flex-shrink: 0;
 `;
 
 const NavLink = styled(NativeNavLink)`
