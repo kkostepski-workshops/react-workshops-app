@@ -13,6 +13,7 @@ const NavLink = styled(NativeNavLink)`
   height: 35px;
   text-decoration: none;
   padding: 0 10px;
+  color: ${props => props.theme.linkColor};
 `;
 
 export { Navigation, NavLink };
