@@ -36,8 +36,8 @@ const PeoplePage = () => {
             </thead>
 
             <tbody>
-              {data.data.map(({ name, surname, email, gender }) => (
-                <tr>
+              {data.data.map(({ _id, name, surname, email, gender }) => (
+                <tr key={_id}>
                   <td>{name}</td>
                   <td>{surname}</td>
                   <td>{email}</td>
