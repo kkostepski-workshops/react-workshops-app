@@ -22,13 +22,21 @@ const AddPersonPage = () => (
     >
       {props => (
         <Form>
-          <TextField name="name" label="Name" validate={required} />
+          <TextField
+            name="name"
+            label="Name"
+            validate={value => validator(value, [required])}
+          />
           <ErrorMessage name="name" render={msg => <div>{msg}</div>} />
 
           <TextField name="surname" label="Surname" />
           <ErrorMessage name="surname" />
 
-          <TextField name="email" label="Email" validate={required} />
+          <TextField
+            name="email"
+            label="Email"
+            validate={value => validator(value, [required, email])}
+          />
           <ErrorMessage name="email" />
 
           <Select name="gender" label="Gender">
