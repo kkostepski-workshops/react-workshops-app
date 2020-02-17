@@ -10,7 +10,7 @@ import Button from '../../components/Button';
 import validator, { email, required } from '../../components/form/validators';
 
 const AddPersonPage = () => {
-  const [{ data, loading, error }, executeAddPerson] = useAxios(
+  const [{}, executeAddPerson] = useAxios(
     { url: '/api/person', method: 'PUT' },
     {
       manual: true

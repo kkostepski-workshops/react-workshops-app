@@ -8,7 +8,15 @@ import Page from '../../layouts/Page';
 import * as Styled from './People.styles';
 
 const PeoplePage = () => {
-  const [{ data, loading, error }] = useAxios('/api/person');
+  const [{ data, loading, error }, refetchPeople] = useAxios('/api/person');
+  const [{}, executeDeletePerson] = useAxios(
+    {
+      method: 'DELETE'
+    },
+    {
+      manual: true
+    }
+  );
 
   if (error) {
     return (
@@ -41,6 +49,7 @@ const PeoplePage = () => {
                 <th>Surname</th>
                 <th>Email</th>
                 <th>Gender</th>
+                <th></th>
               </tr>
             </thead>
 
@@ -51,6 +60,21 @@ const PeoplePage = () => {
                   <td>{surname}</td>
                   <td>{email}</td>
                   <td>{gender}</td>
+                  <td>
+                    <a
+                      href="#remove"
+                      onClick={async e => {
+                        e.preventDefault();
+                        await executeDeletePerson({
+                          data: { id: _id },
+                          url: `/api/person/${_id}`
+                        });
+                        refetchPeople();
+                      }}
+                    >
+                      remove
+                    </a>
+                  </td>
                 </tr>
               ))}
             </tbody>
