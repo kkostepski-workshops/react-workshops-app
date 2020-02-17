@@ -1,11 +1,11 @@
 import React from 'react';
-import { Formik, Form, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 
 import Page from '../../layouts/Page';
 import Heading from '../../layouts/Heading';
 import TextField from '../../components/form/TextField';
 import Select from '../../components/form/Select';
-import validator, { email, required } from '../../components/form/validators';
+import Button from '../../components/Button';
 
 const AddPersonPage = () => (
   <Page hasNavigation>
@@ -13,40 +13,22 @@ const AddPersonPage = () => (
 
     <Formik
       initialValues={{}}
-      onSubmit={(values, actions) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          actions.setSubmitting(false);
-        }, 1000);
+      onSubmit={values => {
+        console.log('values', values);
       }}
     >
-      {props => (
+      {() => (
         <Form>
-          <TextField
-            name="name"
-            label="Name"
-            validate={value => validator(value, [required])}
-          />
-          <ErrorMessage name="name" render={msg => <div>{msg}</div>} />
-
+          <TextField name="name" label="Name" />
           <TextField name="surname" label="Surname" />
-          <ErrorMessage name="surname" />
-
-          <TextField
-            name="email"
-            label="Email"
-            validate={value => validator(value, [required, email])}
-          />
-          <ErrorMessage name="email" />
-
+          <TextField name="email" label="Email" />
           <Select name="gender" label="Gender">
             <option value="">-- select --</option>
             <option value="male">male</option>
             <option value="female">female</option>
           </Select>
-          <ErrorMessage name="gender" />
-
-          <button type="submit">Add</button>
+          <br />
+          <Button type="submit">Add</Button>
         </Form>
       )}
     </Formik>
