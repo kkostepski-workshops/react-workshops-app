@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 
+import './assets/styles.css';
+
 import PeoplePage from './components/PeoplePage';
 import AddPersonPage from './components/AddPersonPage';
 import AttractionsPage from './components/AttractionsPage';
