@@ -50,6 +50,7 @@ const PeoplePage = () => {
                 <th>Email</th>
                 <th>Gender</th>
                 <th></th>
+                <th></th>
               </tr>
             </thead>
 
@@ -60,6 +61,9 @@ const PeoplePage = () => {
                   <td>{surname}</td>
                   <td>{email}</td>
                   <td>{gender}</td>
+                  <td>
+                    <NavLink to={`/people/edit/${_id}`}>edit</NavLink>
+                  </td>
                   <td>
                     <a
                       href="#remove"
