@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
 
   th {
     background-color: #c0c0c0;

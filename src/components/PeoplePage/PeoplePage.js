@@ -8,7 +8,9 @@ import Page from '../../layouts/Page';
 import * as Styled from './People.styles';
 
 const PeoplePage = () => {
-  const [{ data, loading, error }, refetchPeople] = useAxios('/api/person');
+  const [{ data, loading, error }, refetchPeople] = useAxios('/api/person', {
+    useCache: false
+  });
   const [{}, executeDeletePerson] = useAxios(
     {
       method: 'DELETE'
@@ -50,6 +52,7 @@ const PeoplePage = () => {
                 <th>Email</th>
                 <th>Gender</th>
                 <th></th>
+                <th></th>
               </tr>
             </thead>
 
@@ -60,6 +63,9 @@ const PeoplePage = () => {
                   <td>{surname}</td>
                   <td>{email}</td>
                   <td>{gender}</td>
+                  <td>
+                    <NavLink to={`/people/edit/${_id}`}>edit</NavLink>
+                  </td>
                   <td>
                     <a
                       href="#remove"
