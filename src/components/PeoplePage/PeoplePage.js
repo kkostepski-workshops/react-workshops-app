@@ -8,7 +8,9 @@ import Page from '../../layouts/Page';
 import * as Styled from './People.styles';
 
 const PeoplePage = () => {
-  const [{ data, loading, error }, refetchPeople] = useAxios('/api/person');
+  const [{ data, loading, error }, refetchPeople] = useAxios('/api/person', {
+    useCache: false
+  });
   const [{}, executeDeletePerson] = useAxios(
     {
       method: 'DELETE'
