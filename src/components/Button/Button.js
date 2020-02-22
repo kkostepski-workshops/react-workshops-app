@@ -7,6 +7,11 @@ const Button = styled.button`
   padding: 5px;
   min-width: 100px;
   cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 `;
 
 export default Button;

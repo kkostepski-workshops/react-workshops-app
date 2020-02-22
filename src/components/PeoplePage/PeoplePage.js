@@ -2,10 +2,11 @@ import React from 'react';
 import useAxios from 'axios-hooks';
 import { NavLink } from 'react-router-dom';
 
+import Button from '../../components/Button'
 import Spinner from '../../components/Spinner';
 import Heading from '../../layouts/Heading';
 import Page from '../../layouts/Page';
-import * as Styled from './People.styles';
+import DataTable from '../DataTable';
 
 const PeoplePage = () => {
   const [{ data, loading, error }, refetchPeople] = useAxios('/api/person', {
@@ -36,55 +37,41 @@ const PeoplePage = () => {
         <>
           <Heading
             renderActions={() => (
-              <Styled.ButtonAddNew>
+              <Button>
                 <NavLink to="/people/new">Add new person</NavLink>
-              </Styled.ButtonAddNew>
+              </Button>
             )}
           >
             People
           </Heading>
 
-          <Styled.Table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Email</th>
-                <th>Gender</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {data.data.map(({ _id, name, surname, email, gender }) => (
-                <tr key={_id}>
-                  <td>{name}</td>
-                  <td>{surname}</td>
-                  <td>{email}</td>
-                  <td>{gender}</td>
-                  <td>
-                    <NavLink to={`/people/edit/${_id}`}>edit</NavLink>
-                  </td>
-                  <td>
-                    <a
-                      href="#remove"
-                      onClick={async e => {
-                        e.preventDefault();
-                        await executeDeletePerson({
-                          data: { id: _id },
-                          url: `/api/person/${_id}`
-                        });
-                        refetchPeople();
-                      }}
-                    >
-                      remove
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Styled.Table>
+          <DataTable
+            data={data.data}
+            columns={[
+              { name: 'name', label: 'Name' },
+              { name: 'surname', label: 'Surname' },
+              { name: 'email', label: 'Email' },
+              { name: 'gender', label: 'Gender' }
+            ]}
+            renderActions={[
+              id => <NavLink to={`/people/edit/${id}`}>edit</NavLink>,
+              id => (
+                <a
+                  href="#remove"
+                  onClick={async e => {
+                    e.preventDefault();
+                    await executeDeletePerson({
+                      data: { id },
+                      url: `/api/person/${id}`
+                    });
+                    refetchPeople();
+                  }}
+                >
+                  remove
+                </a>
+              )
+            ]}
+          />
         </>
       )}
     </Page>

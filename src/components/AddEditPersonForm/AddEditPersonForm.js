@@ -7,13 +7,21 @@ import ValidationError from '../form/ValidationError';
 import Button from '../Button';
 import validator, { email, required } from '../form/validators';
 
-const AddEditPersonForm = ({ initialValues = {}, executeAddOrEditPerson }) => (
+const AddEditPersonForm = ({
+  initialValues = {},
+  executeAddOrEditPerson,
+  onComplete
+}) => (
   <Formik
     initialValues={initialValues}
-    onSubmit={values => {
-      executeAddOrEditPerson({
+    onSubmit={async values => {
+      await executeAddOrEditPerson({
         data: values
       });
+
+      if (onComplete) {
+        onComplete();
+      }
     }}
   >
     {() => (
