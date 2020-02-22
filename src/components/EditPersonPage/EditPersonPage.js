@@ -1,6 +1,6 @@
 import React from 'react';
 import useAxios from 'axios-hooks';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 
 import Page from '../../layouts/Page';
 import Heading from '../../layouts/Heading';
@@ -8,6 +8,7 @@ import AddEditPersonForm from '../AddEditPersonForm';
 
 const AddPersonPage = () => {
   const params = useParams();
+  const history = useHistory();
   const [{ data, loading }] = useAxios(`/api/person/${params.id}`);
   const [{}, executeEditPerson] = useAxios(
     { url: `/api/person/${params.id}`, method: 'PUT' },
@@ -27,6 +28,9 @@ const AddPersonPage = () => {
       <AddEditPersonForm
         executeAddOrEditPerson={executeEditPerson}
         initialValues={data.data}
+        onComplete={() => {
+          history.push('/people');
+        }}
       />
     </Page>
   );
