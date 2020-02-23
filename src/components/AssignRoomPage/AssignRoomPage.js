@@ -47,7 +47,7 @@ const AssignRoomPage = () => {
   }, [assignmentDataLoading]);
 
   if (peopleDataLoading || assignmentDataLoading) {
-    return 'Loading...';
+    return <Page hasNavigation>Loading...</Page>;
   }
 
   return (
