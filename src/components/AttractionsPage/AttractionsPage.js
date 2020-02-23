@@ -38,7 +38,7 @@ const AttractionsPage = () => {
           <Heading
             renderActions={() => (
               <Button>
-                <NavLink to="/attraction/new">Add attraction</NavLink>
+                <NavLink to="/attractions/new">Add attraction</NavLink>
               </Button>
             )}
           >
@@ -51,7 +51,7 @@ const AttractionsPage = () => {
               { name: 'name', label: 'Name' },
             ]}
             renderActions={[
-              id => <NavLink to={`/attraction/edit/${id}`}>edit</NavLink>,
+              id => <NavLink to={`/attractions/edit/${id}`}>edit</NavLink>,
               id => (
                 <a
                   href="#remove"
