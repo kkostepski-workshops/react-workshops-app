@@ -11,8 +11,7 @@ const AssignRoomPage = () => {
     useCache: false
   });
   const [{ assignRoomLoading }, executeAssingRoom] = useAxios(
-    '/api/assignRoom',
-    {},
+    { url: `/api/assignRoom`, method: 'POST' },
     {
       manual: true
     }
@@ -31,19 +30,17 @@ const AssignRoomPage = () => {
   return (
     <Page hasNavigation>
       <Heading
-        renderActions={() => (
-          <>
-            <Button onClick={handleShuffleClick}>Shuffle</Button>
-            <Button
-              onClick={() => {
-                executeAssingRoom();
-              }}
-              disabled={roomGroups.length === 0 || assignRoomLoading}
-            >
-              Save
-            </Button>
-          </>
-        )}
+        renderActions={[
+          <Button onClick={handleShuffleClick}>Shuffle</Button>,
+          <Button
+            onClick={() => {
+              executeAssingRoom();
+            }}
+            disabled={roomGroups.length === 0 || assignRoomLoading}
+          >
+            Save
+          </Button>
+        ]}
       >
         Assign room page
       </Heading>

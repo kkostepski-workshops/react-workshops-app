@@ -2,7 +2,7 @@ import React from 'react';
 import useAxios from 'axios-hooks';
 import { NavLink } from 'react-router-dom';
 
-import Button from '../../components/Button'
+import Button from '../../components/Button';
 import Spinner from '../../components/Spinner';
 import Heading from '../../layouts/Heading';
 import Page from '../../layouts/Page';
@@ -36,11 +36,11 @@ const PeoplePage = () => {
       ) : (
         <>
           <Heading
-            renderActions={() => (
+            renderActions={[
               <Button>
                 <NavLink to="/people/new">Add new person</NavLink>
               </Button>
-            )}
+            ]}
           >
             People
           </Heading>
