@@ -7,7 +7,9 @@ const Heading = ({ children, renderActions }) => (
 
     <Styled.Actions>
       {renderActions &&
-        renderActions.map(action => <Styled.Action>{action}</Styled.Action>)}
+        renderActions.map((action, index) => (
+          <Styled.Action key={index}>{action}</Styled.Action>
+        ))}
     </Styled.Actions>
   </Styled.Heading>
 );
