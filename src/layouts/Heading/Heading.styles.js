@@ -8,7 +8,14 @@ const Heading = styled.h1`
 `;
 
 const Actions = styled.div`
+  display: flex;
   margin-left: 10px;
 `;
 
-export { Heading, Actions };
+const Action = styled.div`
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+`;
+
+export { Heading, Action, Actions };
