@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Page = styled.div`
   display: flex;
-  height: 100vh;
+  min-height: calc(100vh - 50px);
 `;
 
 const Header = styled.header`
