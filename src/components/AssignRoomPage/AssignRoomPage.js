@@ -31,7 +31,7 @@ const AssignRoomPage = () => {
     id => {
       return peopleData.data.find(p => p._id === id) || {};
     },
-    [peopleData.data]
+    [peopleData]
   );
 
   const handleShuffleClick = () => {
