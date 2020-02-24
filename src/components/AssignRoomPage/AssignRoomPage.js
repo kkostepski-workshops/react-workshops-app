@@ -27,9 +27,12 @@ const AssignRoomPage = () => {
   );
   const [roomGroups, setRoomGroups] = useState([]);
 
-  const getPerson = useCallback(id => {
-    return peopleData.data.find(p => p._id === id) || {};
-  });
+  const getPerson = useCallback(
+    id => {
+      return peopleData.data.find(p => p._id === id) || {};
+    },
+    [peopleData.data]
+  );
 
   const handleShuffleClick = () => {
     const groups = shuffle(peopleData.data);
@@ -44,7 +47,7 @@ const AssignRoomPage = () => {
     if (assignmentData) {
       setRoomGroups(assignmentData.data);
     }
-  }, [assignmentDataLoading]);
+  }, [assignmentData]);
 
   if (peopleDataLoading || assignmentDataLoading) {
     return <Page hasNavigation>Loading...</Page>;
