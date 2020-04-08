@@ -1,0 +1,206 @@
+{
+  "people": {
+    "status": "success",
+    "message": null,
+    "data": [
+      {
+        "_id": "5e5a185676db33db4a219ef6",
+        "name": "Joe",
+        "surname": "Doe",
+        "email": "joe.doe@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.810Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219ef7",
+        "name": "John",
+        "surname": "Lennon",
+        "email": "john.lennon@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.810Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219ef8",
+        "name": "Dan",
+        "surname": "Abramov",
+        "email": "dan.abramov@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.810Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219ef5",
+        "name": "Johny",
+        "surname": "Ive",
+        "email": "johny.ive@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.809Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219ef9",
+        "name": "Kate",
+        "surname": "Bush",
+        "email": "kate.bush@example.com",
+        "gender": "female",
+        "create_date": "2020-02-29T07:52:54.810Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219efa",
+        "name": "Curtney",
+        "surname": "Love",
+        "email": "curtney.love@example.com",
+        "gender": "female",
+        "create_date": "2020-02-29T07:52:54.810Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219efb",
+        "name": "Kurt",
+        "surname": "Cobain",
+        "email": "kurt.cobain@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.811Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219ef4",
+        "name": "John",
+        "surname": "Smith",
+        "email": "john.smith@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.806Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219efc",
+        "name": "Dido",
+        "surname": "Armstrong",
+        "email": "dido.armstrong@example.com",
+        "gender": "female",
+        "create_date": "2020-02-29T07:52:54.811Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219efd",
+        "name": "Katarzyna",
+        "surname": "Nosowska",
+        "email": "katarzyna.nosowskag@example.com",
+        "gender": "female",
+        "create_date": "2020-02-29T07:52:54.811Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219efe",
+        "name": "Joe",
+        "surname": "Bonamassa",
+        "email": "joe.bonamassa@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.811Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219eff",
+        "name": "Jimi",
+        "surname": "Hendrix",
+        "email": "jomi.hendrix@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.811Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219f00",
+        "name": "Monika",
+        "surname": "Borzym",
+        "email": "monika.borzym@example.com",
+        "gender": "female",
+        "create_date": "2020-02-29T07:52:54.812Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219f01",
+        "name": "David",
+        "surname": "Gahan",
+        "email": "david.gahan@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.812Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219f02",
+        "name": "Elin",
+        "surname": "Larsson",
+        "email": "elin.Larsson@example.com",
+        "gender": "female",
+        "create_date": "2020-02-29T07:52:54.812Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219f03",
+        "name": "Walter",
+        "surname": "Trout",
+        "email": "walter.trout@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.812Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219f04",
+        "name": "Agnieszka",
+        "surname": "Chylińska",
+        "email": "agnieszka.chylińska@example.com",
+        "gender": "female",
+        "create_date": "2020-02-29T07:52:54.813Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219f05",
+        "name": "Sandra",
+        "surname": "Nasić",
+        "email": "sandra.nasic@example.com",
+        "gender": "female",
+        "create_date": "2020-02-29T07:52:54.813Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a185676db33db4a219f06",
+        "name": "Ozzy",
+        "surname": "Osbourne",
+        "email": "ozzy.osbourne@example.com",
+        "gender": "male",
+        "create_date": "2020-02-29T07:52:54.813Z",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a7587bd61c3856947442c",
+        "create_date": "2020-02-29T14:30:31.225Z",
+        "name": "Konrad",
+        "surname": "test",
+        "gender": "male",
+        "email": "test",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a765ebd61c3856947442d",
+        "create_date": "2020-02-29T14:34:06.392Z",
+        "name": "Konrad",
+        "surname": "asd",
+        "gender": "female",
+        "email": "asd",
+        "__v": 0
+      },
+      {
+        "_id": "5e5a7919bd61c3856947442e",
+        "create_date": "2020-02-29T14:45:45.056Z",
+        "name": "asdfasdf",
+        "surname": "asdf",
+        "gender": "female",
+        "email": "asdfasdasdf",
+        "__v": 0
+      }
+    ]
+  }
+}
