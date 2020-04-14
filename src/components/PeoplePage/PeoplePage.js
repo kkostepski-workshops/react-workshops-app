@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import { useQuery } from 'react-query';
 
 import Page from '../../layouts/Page/Page';
 
@@ -11,20 +12,13 @@ const availableColumns = [
 ];
 
 const PeoplePage = () => {
-  const [refetch, setRefetch] = useState(false);
-  const [data, setData] = useState([]);
-  const [isFetching, setIsFetching] = useState(false);
+  const { data, isFetching, error, refetch } = useQuery('people', () =>
+    fetch('http://localhost:4000/people').then(response => response.json())
+  );
 
-  useEffect(() => {
-    setIsFetching(true);
-
-    fetch('http://localhost:4000/people')
-      .then(reponse => reponse.json())
-      .then(response => {
-        setIsFetching(false);
-        setData(response.data);
-      });
-  }, [refetch]);
+  if (error) {
+    return error.toString();
+  }
 
   if (isFetching) {
     return <div>Loading...</div>;
@@ -34,7 +28,13 @@ const PeoplePage = () => {
     <Page hasNavigation>
       <h1>People page</h1>
 
-      <button onClick={() => setRefetch(!refetch)}>refetch data</button>
+      <button
+        onClick={() => {
+          refetch();
+        }}
+      >
+        refetch data
+      </button>
 
       <StyledTable>
         <thead>
@@ -46,13 +46,14 @@ const PeoplePage = () => {
         </thead>
 
         <tbody>
-          {data.map(element => (
-            <tr key={element._id}>
-              {availableColumns.map(column => (
-                <td key={column.name}>{element[column.name]}</td>
-              ))}
-            </tr>
-          ))}
+          {data &&
+            data.data.map(element => (
+              <tr key={element._id}>
+                {availableColumns.map(column => (
+                  <td key={column.name}>{element[column.name]}</td>
+                ))}
+              </tr>
+            ))}
         </tbody>
       </StyledTable>
     </Page>
