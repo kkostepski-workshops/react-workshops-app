@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useQuery } from 'react-query';
 
 import Page from '../../layouts/Page/Page';
+import AddPersonForm from '../AddPersonForm';
 
 const availableColumns = [
   { name: 'name', title: 'Imię' },
@@ -36,6 +37,11 @@ const PeoplePage = () => {
 
   return (
     <Page hasNavigation>
+      <h1>Add new person</h1>
+      <AddPersonForm />
+
+      <hr />
+
       <h1>People page</h1>
 
       <button
