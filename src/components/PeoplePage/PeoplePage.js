@@ -12,8 +12,18 @@ const availableColumns = [
 ];
 
 const PeoplePage = () => {
-  const { data, isFetching, error, refetch } = useQuery('people', () =>
-    fetch('http://localhost:4000/people').then(response => response.json())
+  const { data, isFetching, error, refetch } = useQuery(
+    'people',
+    () =>
+      fetch('http://localhost:4000/people').then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(`${response.status}: ${response.statusText}`);
+        }
+      }).catch(error => {
+        throw new Error(error);
+      })
   );
 
   if (error) {
